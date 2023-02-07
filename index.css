@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root {
+  --bg-color: #ffffff;
+  --bg2-color: #000;
+  --primary-color: #000;
+  --secondary-color: #0844bd;
+  --tertiary-color: #ffffff;
+  --default-width: 85%;
+}
+html {
+  font-size: 62.5%;
+}
+section {
+    width: var(--default-width);
+}
+/**** HEADER *****/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 4rem;
+  width: var(--default-width);
+}
+.logo {
+  max-width: 100%;
+}
+/***** NAV ****/
+.nav {
+
+}
+.nav-list {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+.nav-list a {
+  color: var(--primary-color);
+}
+.nav-list li {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/***** SECTION ONE HERO ****/
+
+/***** SECTION TWO SKILLS  ****/
+
+/***** SECTION THREE PROJECTS ****/
+
+/***** SECTION FOUR ABOUT ME ****/
+
+/***** SECTION FIVE FAQ ****/
+
+/***** FOOTER  ****/
