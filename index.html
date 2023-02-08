@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="base.js" defer></script>
     <title>DavidHughesJr</title>
   </head>
   <body>
@@ -18,20 +22,43 @@
           alt="header image"
         />
       </a>
-      <nav class="nav">
-        <ul class="nav-list">
+      <nav id="desktop-nav" class="nav-desktop">
+        <ul class="nav-list-desktop">
           <li><a href="#"> Projects </a></li>
           <li><a href="#"> Services </a></li>
           <li><a href="#"> About Me </a></li>
           <li><a href="#"> Contact </a></li>
         </ul>
       </nav>
-      <i class="ri-menu-line hamburger-menu"></i>
+      <div>
+        <i class="ri-menu-line hamburger-menu"></i>
+      </div>
     </header>
+    <nav id="mobile-nav" class="nav-mobile nav-mobile-hidden">
+      <ul class="nav-list">
+        <li><a href="#"> Projects </a></li>
+        <li><a href="#"> Services </a></li>
+        <li><a href="#"> About Me </a></li>
+        <li><a href="#"> Contact </a></li>
+      </ul>
+    </nav>
     <main>
       <section class="section hero-section">
-        <div>
-
+        <div class="hero-container">
+          <div>
+            <h1 class="hero-text">
+              <span class="hero-gradient-heading"> I develop products </span>
+              <span> that inspire & motivate others. </span>
+            </h1>
+            <p class="hero-paragraph">
+              Hi! My name is David Hughes Jr. I am a frontend developer whose
+              goal is to assist you with your website needs!
+            </p>
+            <button>Contact Me</button>
+          </div>
+          <div>
+            Image here 
+          </div>
         </div>
       </section>
     </main>
