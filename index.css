@@ -21,6 +21,7 @@ html {
 section {
   width: var(--default-width);
   margin: auto;
+  margin-bottom: 2rem;
 }
 button {
   padding: 1.5rem 2rem;
@@ -270,9 +271,26 @@ p {
   opacity: .9;
   margin: 0 1rem;
 }
+.services-circle-black {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: .9;
+    margin: 0 1rem;
+  }
 
 /***** SECTION THREE PROJECTS ****/
-
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .projects-heading {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
 /***** SECTION FOUR ABOUT ME ****/
 
 /***** SECTION FIVE FAQ ****/
