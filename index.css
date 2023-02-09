@@ -10,7 +10,6 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  list-style: none;
   scroll-behavior: smooth;
   box-sizing: border-box;
   font-family: sans-serif;
@@ -30,6 +29,28 @@ button {
   font-size: 1.8rem;
   border: none;
 }
+h1 {
+  font-size: 3.6rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+h5 {
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+}
+p {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  opacity: 0.6;
+  margin: 1rem 0;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -38,12 +59,23 @@ button {
     opacity: 1;
   }
 }
-@keyframes mobileTranslateY {
+@keyframes mobileTranslateOpen {
   0% {
-    transform: translateY(-30rem);
+    transform: translateY(-50rem);
   }
   100% {
     transform: translateY(0rem);
+  }
+}
+@keyframes mobileTranslateClose {
+  0% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(-50rem);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
 }
 @keyframes mainBtnHover {
@@ -53,17 +85,21 @@ button {
   }
   100% {
     transform: translate3d(7px, 7px, 0px);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
 }
 /*** COMMON ***/
 .btn {
-  transition: transform 0.5s;
+  transition: transform 0.3s;
   position: relative;
   z-index: 10;
 }
 .btn:hover {
   transform: translate3d(7px, 7px, 7px) scale3d(1, 1, 1);
   transform-style: preserve-3d;
+  cursor: pointer;
 }
 .btn-bg {
   position: absolute;
@@ -76,8 +112,8 @@ button {
   background-image: linear-gradient(
     108deg,
     var(--secondary-color) 8%,
-    var(--secondary-color)  18%,
-    var(--secondary-color)  40%,
+    var(--secondary-color) 18%,
+    var(--secondary-color) 40%,
     var(--bg-color) 77%,
     var(--bg-color) 91%
   );
@@ -85,6 +121,20 @@ button {
   -ms-transform: translate(7px, 7px);
   transform: translate(7px, 7px);
 }
+.gradient-heading {
+  margin: 1rem 0;
+  background-image: linear-gradient(
+    108deg,
+    var(--secondary-color) 8%,
+    var(--bg-color) 20%,
+    var(--secondary-color) 77%,
+    var(--bg2-color) 91%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /**** HEADER *****/
 .header {
   display: flex;
@@ -108,17 +158,19 @@ button {
   margin: auto;
   padding-bottom: 2rem;
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transform: translateY(-50rem);
 }
 .nav-mobile-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+  transform: translateY(-50rem);
+  animation: mobileTranslateClose 0.5s ease-in;
 }
 .nav-mobile-active {
   opacity: 1;
   pointer-events: all;
   visibility: visible;
-  animation: mobileTranslateY 0.5s ease-in;
+  animation: mobileTranslateOpen 0.5s ease-in;
+  transform: translateY(0rem);
 }
 .nav-desktop {
   display: none;
@@ -143,6 +195,9 @@ button {
 .hamburger-menu {
   font-size: 2rem;
 }
+.hamburger-menu:hover {
+  cursor: pointer;
+}
 /***** SECTION ONE HERO ****/
 .hero-container {
   display: flex;
@@ -151,7 +206,6 @@ button {
   height: fit-content;
 }
 .hero-text {
-  font-size: 4rem;
   line-height: 100%;
 }
 .hero-gradient-heading {
@@ -169,24 +223,53 @@ button {
   -webkit-text-fill-color: transparent;
 }
 .hero-paragraph {
-  font-size: 2rem;
-  color: var(--primary-color);
-  opacity: 0.6;
-  margin: 3rem 0;
   line-height: 150%;
+  font-size: 2rem;
+  margin: 3rem 0;
 }
-.hero-image-container{
-    margin: auto;
+.hero-image-container {
+  margin: auto;
 }
-.hero-image{
-    padding: 4rem;
-    width: 30rem;
-    border-radius: 50%;
-    margin: auto;
+.hero-image {
+  padding: 4rem;
+  width: 30rem;
+  border-radius: 50%;
+  margin: auto;
 }
 
-
-/***** SECTION TWO SKILLS  ****/
+/***** SECTION TWO SERVICES  ****/
+.services-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services-heading {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.services-list-heading {
+  text-align: left;
+}
+.services-list {
+  font-size: 1.6rem;
+  list-style: circle !important;
+  line-height: 3rem;
+}
+.services-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+.services-circle-blue {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  opacity: .9;
+  margin: 0 1rem;
+}
 
 /***** SECTION THREE PROJECTS ****/
 
