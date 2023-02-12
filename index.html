@@ -9,12 +9,14 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <script src="base.js" defer></script>
+    <script src="/js/base.js" defer></script>
+    <script src="/js/projects.js" defer></script>
     <title>DavidHughesJr</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
   </head>
   <body>
     <header class="header">
-      <a>
+      <a href="index.html">
         <img
           class="logo"
           src="img/portfolio-logo.png"
@@ -24,22 +26,22 @@
       </a>
       <nav id="desktop-nav" class="nav-desktop">
         <ul class="nav-list-desktop">
-          <li><a href="#"> Projects </a></li>
-          <li><a href="#"> Services </a></li>
-          <li><a href="#"> About Me </a></li>
-          <li><a href="#"> Contact </a></li>
+          <li><a href="#projects"> Projects </a></li>
+          <li><a href="#servies"> Services </a></li>
+          <li><a href="#about-me"> About Me </a></li>
+          <li><a href="#contact"> Contact </a></li>
         </ul>
       </nav>
-      <div>
-        <i class="ri-menu-line hamburger-menu"></i>
+      <div class="hamburger-menu">
+        <i class="ri-menu-line"></i>
       </div>
     </header>
     <nav id="mobile-nav" class="nav-mobile">
       <ul class="nav-list">
-        <li><a href="#"> Projects </a></li>
-        <li><a href="#"> Services </a></li>
-        <li><a href="#"> About Me </a></li>
-        <li><a href="#"> Contact </a></li>
+        <li><a href="#projects"> Projects </a></li>
+        <li><a href="#servces"> Services </a></li>
+        <li><a href="#about-me"> About Me </a></li>
+        <li><a href="#contact"> Contact </a></li>
       </ul>
     </nav>
     <main>
@@ -54,7 +56,7 @@
               Hi! My name is David Hughes Jr. I am a frontend developer whose
               goal is to assist you with your website needs!
             </p>
-            <a class="btn" href="#" target="_blank">
+            <a class="btn" href="mailto:dave@davidhughesjr.net" target="_blank">
               <button class="btn">Contact Me</button>
               <button class="btn-bg"></button>
             </a>
@@ -64,115 +66,230 @@
           </div>
         </div>
       </section>
-      <section class="section">
+      <section id="services" class="section">
         <div class="services-container">
           <div class="services-heading">
             <h5 class="gradient-heading">SERVICES</h5>
             <h2>Helping you solve problems one step at a time!</h2>
           </div>
-          <div class="services-list">
-            <div class="services-circles">
-              <div class="services-circle-blue"></div>
-              <div class="services-circle-blue"></div>
-              <div class="services-circle-blue"></div>
+          <div class="services-content">
+            <div class="services-list">
+              <div class="services-circles">
+                <div class="services-circle-blue"></div>
+                <div class="services-circle-blue"></div>
+                <div class="services-circle-blue"></div>
+              </div>
+              <div class="services-list-heading">
+                <h3>What I Can do for you</h3>
+                <p>Amazing Communication focused on your needs first!</p>
+              </div>
+              <ul class="services-list-items">
+                <li>Direct web call discussion</li>
+                <li>E-commerce store design & suggestions</li>
+                <li>Detailed explanations</li>
+              </ul>
             </div>
-            <div class="services-list-heading">
-              <h3>What I Can do for you</h3>
-              <p>Amazing Communication focused on your needs first!</p>
+            <div class="services-list">
+              <div class="services-circles">
+                <div class="services-circle-black"></div>
+                <div class="services-circle-black"></div>
+                <div class="services-circle-black"></div>
+              </div>
+              <div class="services-list-heading">
+                <h3>Applications I'm fluent in</h3>
+                <p>
+                  Every developer needs the right tools do the perfect job. I
+                  can help in multiple different avenues.
+                </p>
+              </div>
+              <ul class="services-list-items">
+                <li>Html Css & Javascript</li>
+                <li>React</li>
+                <li>Shopify & Webflow</li>
+              </ul>
             </div>
-            <ul>
-              <li>Direct web call discussion</li>
-              <li>E-commerce store design & suggestions</li>
-              <li>Detailed explanations</li>
-            </ul>
-          </div>
-          <div class="services-list">
-            <div class="services-circles">
-              <div class="services-circle-black"></div>
-              <div class="services-circle-black"></div>
-              <div class="services-circle-black"></div>
+            <div class="services-list">
+              <div class="services-circles">
+                <div class="services-circle-blue"></div>
+                <div class="services-circle-blue"></div>
+                <div class="services-circle-blue"></div>
+              </div>
+              <div class="services-list-heading">
+                <h3>What you can expect</h3>
+                <p>Amazing Communication focused on your needs first!</p>
+              </div>
+              <ul class="services-list-items">
+                <li>Clean & functional</li>
+                <li>Device & user friendly</li>
+                <li>Efficient and maintainable</li>
+              </ul>
             </div>
-            <div class="services-list-heading">
-              <h3>Applications I'm fluent in</h3>
-              <p>
-                Every developer needs the right tools do the perfect job. I can
-                help in multiple different avenues.
-              </p>
-            </div>
-            <ul>
-              <li>Html Css & Javascript</li>
-              <li>React</li>
-              <li>Shopify & Webflow</li>
-            </ul>
-          </div>
-          <div class="services-list">
-            <div class="services-circles">
-              <div class="services-circle-blue"></div>
-              <div class="services-circle-blue"></div>
-              <div class="services-circle-blue"></div>
-            </div>
-            <div class="services-list-heading">
-              <h3>What you can expect</h3>
-              <p>Amazing Communication focused on your needs first!</p>
-            </div>
-            <ul>
-              <li>Clean & functional</li>
-              <li>Device & user friendly</li>
-              <li>Efficient and maintainable</li>
-            </ul>
           </div>
         </div>
       </section>
-      <section>
+      <section id="projects">
         <div class="projects-heading">
           <h5 class="gradient-heading">PROJECTS</h5>
           <h2>I deliver quality</h2>
           <div class="margin-1">
-            <a class="btn" href="#" target="_blank">
-                <button class="btn">View all projects</button>
-                <button class="btn-bg"></button>
-              </a>
+            <a class="btn">
+              <button class="btn">View all projects</button>
+              <button class="btn-bg"></button>
+            </a>
           </div>
         </div>
-        <div class="projects-container">
-          <div class="project-highlight-content">
-            <a href="https://unifystream.netlify.app">
-              <div class="project-title">
-                <h5>Project Highlight</h5>
-               <a href="project-links" target="_blank"> <h3 class="project-name">Unify</h3> </a> 
+        <div id="project-highlights-container">
+          <!-- <div class="projects-container">
+            <div class="project-highlight-content">
+              <a href="https://unifystream.netlify.app" target="_blank">
+                <div class="project-title">
+                  <h5>Project Highlight</h5>
+                  <h3 class="project-name">Unify</h3>
+                </div>
+              </a>
+              <div>
+                <p class="project-details">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum et blandit sapien, quis egestas arcu. In hac
+                  habitasse platea dictumst. Mauris scelerisque quam quis tellus
+                  ullamcorper scelerisque. Ut tristique mauris vitae sodales
+                  elementum. Etiam placerat nibh id nisl scelerisque, et
+                  ultricies nulla faucibus. Mauris venenatis quis urna et
+                  dictum.
+                </p>
               </div>
-            </a>
-            <div>
-              <p class="project-details">
-                A minimal way to save and browse current movies and tv-shows
-                that are available now and in the future.
+              <div class="project-tools">
+                <ul>
+                  <li>Html</li>
+                  <li>Css</li>
+                  <li>React</li>
+                  <li>TMDB API</li>
+                  <li>Material UI</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/DavidHughesJr/Unifyhttps://github.com/DavidHughesJr/Unify" target="_blank"> <i class="ri-github-fill"></i> </a>
+                <a href="https://unifystream.netlify.app" target="_blank"> <i class="ri-global-line"></i></a>
+              </div>
+            </div>
+            <div class="project-image-content">
+              <a href="https://unifystream.netlify.app" target="_blank">
+                <img
+                  class="project-image"
+                  src="img/unify-banner.jpg"
+                  alt="project image"
+                />
+              </a>
+            </div>
+          </div> -->
+        </div>
+      </section>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-content">
+            <div class="about-me-heading">
+              <h5 class="gradient-heading">MEET THE DEVELOPER</h5>
+              <h3>Thats me</h3>
+              <p>
+                Web development has been a passion of mine for many years. I
+                love working with my clients and converting their dreams into
+                reality!
               </p>
             </div>
-            <div>
-              <ul class="project-tools">
-                <li>Html</li>
-                <li>Css</li>
-                <li>React</li>
-                <li>TMDB API</li>
-                <li>Material UI</li>
-              </ul>
+            <div class="about-me-img-grid">
+              <img
+                class="about-img"
+                src="img/coffee.jpeg"
+                alt="about me img"
+                loading="lazy"
+              />
+              <img
+                class="about-img-md-1"
+                src="img/coffee.jpeg"
+                alt="about me img"
+                loading="lazy"
+              />
+              <img
+                class="about-img-md-2"
+                src="img/headphones.jpg"
+                alt="about me img"
+                loading="lazy"
+              />
+              <img
+                class="about-img"
+                src="img/coffee.jpeg"
+                alt="about me img"
+                loading="lazy"
+              />
             </div>
-            <div class="project-links">
-              <a href="" target="_blank"> <i class="ri-github-fill"></i> </a>
-              <a href="" target="_blank"> <i class="ri-global-line"></i></a>
-              <a href="" target="_blank"> <button>Highlights</button> </a>
-            </div>
-          </div>
-          <div class="project-image-content">
-            <a href="href" target="_blank"></a>
-            <img
-              class="project-image"
-              src="img/unify-banner.jpg"
-              alt="project image"
-            />
           </div>
         </div>
       </section>
+      <section class="faq-section">
+        <div class="faq-container">
+          <div class="faq-content">
+            <div class="faq-subtitle">
+              <h2>
+                Want to discuss more? <br />
+                <span> Send Me A Message </span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer id="contact" class="footer-section">
+        <div class="footer-container">
+          <div class="footer-content">
+            <div class="footer-logo">
+              <div>
+                <a href="index.html">
+                  <img
+                    src="img/portfolio-logo.png"
+                    alt="footer logo"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div>
+                <a class="footer-email" href="mailto:dave@davidhughesjr.net">
+                  <i class="ri-mail-line"></i> dave@davidhughesjr.net
+                </a>
+              </div>
+            </div>
+            <div class="footer-links">
+              <ul>
+                <li><a href="#projects"> Projects </a></li>
+                <li><a href="#services"> Services </a></li>
+                <li><a href="#about-me"> About Me </a></li>
+                <li><a href="#contact"> Contact </a></li>
+              </ul>
+            </div>
+          </div>
+          <ul class="footer-socials">
+            <li>
+              <a href="https://github.com/DavidHughesJr?tab=repositories">
+                <i class="ri-github-fill"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/hughes_32/">
+                <i class="ri-instagram-line"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com/hughes_32/">
+                <i class="ri-twitter-fill"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/david-hughes-jr/">
+                <i class="ri-linkedin-box-fill"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <h5 class="created-by">Created by DavidHughesJr</h5>
+      </footer>
     </main>
   </body>
 </html>
