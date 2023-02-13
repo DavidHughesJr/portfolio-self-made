@@ -34,8 +34,8 @@ const projectHighlights = projectsData.map((data) => {
           <h3 class="project-name">${data.projectName}</h3>
         </div>
       </a>
-      <div>
-        <p class="project-details">
+      <div class="project-details">
+        <p>
           ${data.details}
         </p>
       </div>
