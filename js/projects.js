@@ -26,7 +26,7 @@ const projectHighlights = projectsData.map((data) => {
     return `<li>${tool}</li>`;
   });
 
-  return ` <div class="projects-container">
+  return ` <div class="projects-container nth-PG">
     <div class="project-highlight-content">
       <a href="${data.website}" target="_blank">
         <div class="project-title">
@@ -39,12 +39,12 @@ const projectHighlights = projectsData.map((data) => {
           ${data.details}
         </p>
       </div>
-      <div class="project-tools">
+      <div class="project-tools nth-PG">
         <ul>
          ${toolsList.join().replaceAll(",", " ")}
         </ul>
       </div>
-      <div class="project-links">
+      <div class="project-links nth-PG">
         <a href="${
           data.github
         }" target="_blank"> <i class="ri-github-fill"></i> </a>
@@ -59,6 +59,7 @@ const projectHighlights = projectsData.map((data) => {
           class="project-image"
           src="${data.image}"
           alt="project image"
+          loading="lazy"
         />
       </a>
     </div>
