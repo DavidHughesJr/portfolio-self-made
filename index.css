@@ -422,10 +422,15 @@ p {
 .other-project h4 {
   font-style: italic;
 }
+.other-project h4:hover {
+  color: var(--secondary-color);
+}
 .other-project:hover {
   cursor: pointer;
   transform: translateY(-1rem) scale3d(1, 1, 1);
   transform-style: preserve-3d;
+  color: var(--secondary-color);
+  transition-delay: 250ms;
 }
 .other-project-icons {
   display: flex;
@@ -448,7 +453,9 @@ p {
   font-size: 1.6rem;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 2.5rem;
+  color: var(--primary-color);
 }
 .other-tools li {
   padding: 0 1rem 0 0;
@@ -551,6 +558,7 @@ p {
 .footer-content {
   display: flex;
   margin-bottom: 2rem;
+  flex-direction: column;
   justify-content: space-between;
 }
 .footer-logo {
@@ -575,11 +583,13 @@ p {
 }
 .footer-links ul {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
   flex-wrap: wrap;
 }
 .footer-links li {
   list-style: none;
-  padding: 0rem 0rem 2rem 2rem;
 }
 .footer-links a {
   color: var(--bg-color);
@@ -709,12 +719,20 @@ p {
   .nth-PG:nth-of-type(odd) .project-links {
     justify-content: flex-start;
   }
+  /***** SECTION FOUR ****/
+  .other-projects-content {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+  /***** SECTION FIVE ****/
+  /***** FOOTER ****/
+  .footer-content {
+    flex-direction: row;
+  }
+  .footer-links ul {
+    flex-direction: row;
+  }
 }
-/***** SECTION FOUR ****/
-.other-projects-content {
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-}
-/***** SECTION FIVE ****/
+
 /* ====== ***** LARGE DEVICES **** ====== */
 @media only screen and (min-width: 1024px) {
   section {
