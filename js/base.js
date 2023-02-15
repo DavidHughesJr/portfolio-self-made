@@ -12,3 +12,23 @@ hamburgerMenu.addEventListener('click', () => {
 })
 
 // ***** LIGHT MODE DARK MODE  ***** // 
+const toggleDarkTheme = document.getElementById("theme-toggle");
+
+var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
+
+
+toggleDarkTheme.onclick = function() {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const targetTheme = "light";
+
+    if (currentTheme === "light") {
+        targetTheme = "dark";
+    }
+    
+
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+};
+

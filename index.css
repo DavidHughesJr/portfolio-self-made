@@ -9,6 +9,20 @@
   --tablet-width: 75%;
   --max-width: 120rem;
 }
+html[data-theme='light'] {
+  --bg-color: #ffffff;
+  --bg2-color: #000;
+  --bg3-color: #e9f0ff;
+  --primary-color: #000;
+  --secondary-color: #0844bd;
+  --tertiary-color: #666667;
+}
+html[data-theme='dark'] {
+  --bg-color: #000000;
+  --bg2-color: #0844bd;
+  --primary-color: #ffff;
+  --secondary-color: #0844bd;
+}
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +33,9 @@
 }
 html {
   font-size: 62.5%;
+}
+body {
+  background-color: var(--bg-color);
 }
 section {
   width: var(--default-width);
