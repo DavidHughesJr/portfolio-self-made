@@ -12,23 +12,30 @@ hamburgerMenu.addEventListener('click', () => {
 })
 
 // ***** LIGHT MODE DARK MODE  ***** // 
-const toggleDarkTheme = document.getElementById("theme-toggle");
+const toggle = document.getElementById("theme-toggle");
+const toggleBtn = document.querySelector('.toggle-btn')
 
-var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+const storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 if (storedTheme)
     document.documentElement.setAttribute('data-theme', storedTheme)
 
+if (storedTheme === 'dark') {
+    toggleBtn.classList.add('ri-sun-fill')
+}
 
-toggleDarkTheme.onclick = function() {
+toggle.addEventListener('click', () => {
+
+
     const currentTheme = document.documentElement.getAttribute("data-theme");
-    const targetTheme = "light";
+    let targetTheme = "light";
 
     if (currentTheme === "light") {
-        targetTheme = "dark";
-    }
-    
 
+        targetTheme = "dark"
+    }
+    toggleBtn.classList.toggle('ri-sun-fill')
     document.documentElement.setAttribute('data-theme', targetTheme)
     localStorage.setItem('theme', targetTheme);
-};
 
+})

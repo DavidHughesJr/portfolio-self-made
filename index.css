@@ -5,23 +5,20 @@
   --primary-color: #000;
   --secondary-color: #0844bd;
   --tertiary-color: #666667;
+  --tertiary-color-alt: #000000;
   --default-width: 85%;
   --tablet-width: 75%;
   --max-width: 120rem;
+  --bg-color-alt: #000;
 }
-html[data-theme='light'] {
-  --bg-color: #ffffff;
-  --bg2-color: #000;
-  --bg3-color: #e9f0ff;
-  --primary-color: #000;
-  --secondary-color: #0844bd;
-  --tertiary-color: #666667;
-}
-html[data-theme='dark'] {
-  --bg-color: #000000;
-  --bg2-color: #0844bd;
+html[data-theme="dark"] {
+  --bg-color: #020a16;
+  --bg2-color: #e9f0ff;
+  --bg3-color: #04173c;
   --primary-color: #ffff;
-  --secondary-color: #0844bd;
+  --tertiary-color: #fff;
+  --bg-color-alt: #ffffff;
+  --tertiary-color-alt: #666667;
 }
 * {
   margin: 0;
@@ -56,19 +53,24 @@ button {
 }
 h1 {
   font-size: 3.6rem;
+  color: var(--primary-color);
 }
 h2 {
   font-size: 3rem;
+  color: var(--primary-color);
 }
 h3 {
   font-size: 2.4rem;
+  color: var(--primary-color);
 }
 h4 {
   font-size: 1.8rem;
+  color: var(--primary-color);
 }
 h5 {
   font-size: 1.2rem;
   letter-spacing: 0.5rem;
+  color: var(--primary-color);
 }
 p {
   font-size: 1.6rem;
@@ -153,7 +155,7 @@ p {
   background-image: linear-gradient(
     108deg,
     var(--secondary-color) 8%,
-    var(--bg-color) 20%,
+    var(--bg-color) 15%,
     var(--secondary-color) 77%,
     var(--bg2-color) 91%
   );
@@ -167,9 +169,10 @@ p {
 .dark-light-mode-icon {
   position: fixed;
   left: auto;
-  right: 5px;
-  top: 20px;
+  right: 1rem;
+  top: 1rem;
   font-size: 21px;
+  color: var(--bg2-color);
 }
 .dark-light-mode-icon:hover {
   cursor: pointer;
@@ -246,6 +249,7 @@ p {
 }
 .hamburger-menu {
   font-size: 2rem;
+  color: var(--bg-color-alt);
 }
 .hamburger-menu:hover {
   cursor: pointer;
@@ -267,7 +271,7 @@ p {
   background-image: linear-gradient(
     108deg,
     var(--secondary-color) 8%,
-    var(--bg-color) 40%,
+    var(--bg-color-alt) 30%,
     var(--secondary-color) 77%,
     var(--bg2-color) 91%
   );
@@ -308,6 +312,9 @@ p {
 .services-list {
   font-size: 1.6rem;
   line-height: 3rem;
+}
+.services-list li {
+  color: var(--tertiary-color-alt);
 }
 .services-list-items {
   display: block;
@@ -355,20 +362,20 @@ p {
 }
 .project-title {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   z-index: 10;
 }
 .project-name {
   margin: 0.5rem 0;
   font-style: italic;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 .project-details {
   margin: 3rem 0;
 }
 .project-details p {
   line-height: 150%;
-  color: var(--bg2-color);
+  color: var(--primary-color);
   opacity: 0.7;
 }
 .project-tools ul {
@@ -438,6 +445,7 @@ p {
 }
 .other-project h4 {
   font-style: italic;
+  color: var(--secondary-color);
 }
 .other-project h4:hover {
   color: var(--secondary-color);
@@ -476,6 +484,7 @@ p {
 }
 .other-tools li {
   padding: 0 1rem 0 0;
+  color: var(--tertiary-color-alt);
 }
 .view-more-btn {
   display: flex;
@@ -554,11 +563,14 @@ p {
   flex-direction: column;
 }
 .faq-subtitle {
-  color: var(--bg-color);
   margin-bottom: 5rem;
 }
+.faq-subtitle h2 {
+  margin-bottom: 5rem;
+  color: white;
+}
 .faq-subtitle span {
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
 }
 .faq-subtitle span:hover {
   color: var(--secondary-color);
@@ -609,7 +621,7 @@ p {
   list-style: none;
 }
 .footer-links a {
-  color: var(--bg-color);
+  color: white;
   text-decoration: none;
 }
 .footer-links a:hover {
@@ -621,7 +633,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--tertiary-color);
   margin: auto;
   width: 50%;
 }
@@ -630,7 +641,7 @@ p {
   padding: 0.5rem;
 }
 .footer-socials a {
-  color: var(--bg-color);
+  color: white;
 }
 .footer-socials a:hover {
   color: var(--secondary-color);
@@ -638,7 +649,7 @@ p {
 }
 .created-by {
   text-align: center;
-  color: var(--bg-color);
+  color: white;
   letter-spacing: 0;
   padding-bottom: 1rem;
 }
@@ -703,7 +714,6 @@ p {
     transform: scale3d(1.2, 1.2, 1);
   }
   .project-details {
-    box-shadow: 0 20px 30px -15px var(--tertiary-color);
     background-color: var(--bg3-color);
     padding: 2.5rem;
     border-radius: 1rem;
@@ -755,6 +765,11 @@ p {
   section {
     width: var(--default-width);
   }
+  .dark-light-mode-icon {
+    right: 3rem;
+    top: 2rem;
+  }
+
   /***** HEADER ****/
   .header {
     width: var(--default-width);
