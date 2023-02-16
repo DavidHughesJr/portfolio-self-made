@@ -61,21 +61,28 @@ const githubImg = document.querySelectorAll('.github-tool-ot')
 // ***** VIEW MORE PROJECTS BUTTON  ***** // 
 const viewMoreBtn = document.querySelector('.view-more-btn')
 const otherProjects = document.querySelectorAll('.other-project')
+const viewBtnText = document.getElementById('view-btn')
 const projectsToShow = 2
 const projectsList = [...otherProjects]
 const otherTotalProjects = projectsList.length
+const viewMoreText = 'View More'
+const viewLessText = 'View Less'
+
 
 
 if (otherTotalProjects < 2) {
   viewMoreBtn.classList.add('display-none')
 }
-
 projectsList.slice(projectsToShow).forEach((item) => {
   item.classList.add('hide-project')
 })
 
 viewMoreBtn.addEventListener('click', () => {
   projectsList.slice(projectsToShow).forEach((item) => {
+
     item.classList.toggle('hide-project')
+    if (item.classList.contains('hide-project')) {
+      viewBtnText.innerText = viewMoreText
+    } else viewBtnText.innerText = viewLessText
   })
 })
