@@ -39,7 +39,7 @@ const otherProjectsList = otherProjectData.map((data) => {
               <div class="other-project-icons">
                 <i class="ri-file-line"></i>
                 <div>
-                  <a class='github-tool-ot' href=${data.github}> <i class="ri-github-line"></i> </a>
+                  <a class='github-tool-ot' href=${data.github ? data.github : ''}> <i class="${data.github ? 'ri-github-line' : ''}"></i> </a>
                   <a href="${data.website}"> <i class="ri-picture-in-picture-exit-fill"></i> </a>
                 </div>
               </div>
