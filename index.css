@@ -80,6 +80,7 @@ p {
   color: var(--tertiary-color);
   margin: 1rem 0;
 }
+/**** ANIMATIONS && KEYFRAMES ****/
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -119,7 +120,58 @@ p {
     visibility: hidden;
   }
 }
-/*** COMMON ***/
+/**** ON SCROLL ANIMATIONS ***/
+@keyframes scrollUp {
+  0% {
+    opacity: 1;
+    transform: translate3d(0px, 50%, 0px) scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1);
+  }
+}
+@keyframes scrollUpMin {
+  0% {
+    opacity: 0;
+    transform: translate3d(7px, 50%, 0px) scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(7px, 11%, 0px) scale3d(1, 1, 1);    
+  }
+}
+@keyframes scaleIn {
+  0% {
+    transform: translate3d(0px, 0px, 0px) scale3d(1.5, 1.5, 1);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-up {
+    box-sizing: border-box;
+  }
+  .scroll-up-animation {
+    animation: scrollUp 1.5s;
+  }
+  .scroll-up-min {
+    box-sizing: border-box;
+  }
+  .scroll-up-animation-min {
+    animation: scrollUpMin 1.5s;
+  }
+  .scale-in {
+    box-sizing: border-box;
+  }
+  .scale-in-animation {
+    animation: scaleIn 1.5s;
+  }
+}
+/**** BUTTONS MARGIN GRADIENTS & HIDDEN ****/
 .btn {
   transition: transform 0.3s;
   position: relative;
@@ -132,6 +184,7 @@ p {
 }
 .btn-bg {
   position: absolute;
+  width: 20%;
   z-index: 1;
   left: 0%;
   top: 0%;
@@ -184,6 +237,7 @@ p {
 .mode-hidden {
   visibility: hidden;
   touch-action: none;
+  opacity: 0;
 }
 .mode-active {
   visibility: visible;
@@ -192,6 +246,7 @@ p {
 .display-none {
   display: none !important;
 }
+
 /**** HEADER *****/
 .header {
   display: flex;

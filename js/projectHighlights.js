@@ -35,15 +35,15 @@ const projectHighlights = projectsData.map((data) => {
     return `<li>${tool}</li>`;
   });
 
-  return ` <div class="projects-container nth-PG">
-    <div class="project-highlight-content">
+  return ` <div class="projects-container nth-PG ">
+    <div class="project-highlight-content scroll-up">
       <a href="${data.website}" target="_blank">
         <div class="project-title">
           <h5>Project Highlight</h5>
           <h3 class="project-name">${data.projectName}</h3>
         </div>
       </a>
-      <div class="project-details">
+      <div class="project-details ">
         <p>
           ${data.details}
         </p>
@@ -60,7 +60,7 @@ const projectHighlights = projectsData.map((data) => {
     }" target="_blank"> <i class="ri-global-line"></i></a>
       </div>
     </div>
-    <div class="project-image-content">
+    <div class="project-image-content scale-in">
       <a href="${data.website}" target="_blank">
         <img
           class="project-image"

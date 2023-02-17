@@ -39,3 +39,44 @@ toggle.addEventListener('click', () => {
     localStorage.setItem('theme', targetTheme);
 
 })
+
+// ***** ON SCROLL ANIMATIONS  ***** //
+const itemsToScrollUp = document.querySelectorAll('.scroll-up')
+const itemsToZoomIn = document.querySelectorAll('.scale-in')
+const itemsToScrollUpMin = document.querySelectorAll('.scroll-up-min')
+const allAnimationClasses = [...itemsToScrollUp, ...itemsToScrollUpMin,...itemsToZoomIn, ]
+
+
+const handleOnScroll = (entries, observer) => {
+
+
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting && entry.target.classList.contains('scroll-up')) {
+            entry.target.classList.add('scroll-up-animation')
+            entry.target.classList.remove('mode-hidden')
+        }
+        if (entry.isIntersecting && entry.target.classList.contains('scroll-up-min')) {
+            entry.target.classList.add('scroll-up-animation-min')
+            entry.target.classList.remove('mode-hidden')
+        }
+        if (entry.isIntersecting && entry.target.classList.contains('scale-in')) {
+            entry.target.classList.add('scale-in-animation')
+            entry.target.classList.remove('mode-hidden')
+        }
+        
+    })
+    console.log(entries)
+  
+}
+
+const onScrollObserver = new IntersectionObserver(handleOnScroll, {
+    root: null,
+    threshold: .5,
+})
+allAnimationClasses.forEach((item) => {
+    onScrollObserver.observe(item)
+    item.classList.add('mode-hidden')
+})
+
+

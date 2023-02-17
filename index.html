@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="index.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
-  <script src="/js/base.js" defer></script>
   <script src="/js/projectHighlights.js" defer></script>
   <script src="/js/projectOthers.js" defer></script>
+  <!-- important to place base.js last -->
+  <script src="/js/base.js" defer></script>
   <title>DavidHughesJr</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 </head>
@@ -46,38 +47,40 @@
     <section class="section">
       <div class="hero-container">
         <div>
-          <h1 class="hero-text">
+          <h1 class="hero-text scroll-up">
             <span class="hero-gradient-heading"> I develop products </span>
             <span> that inspire & motivate others. </span>
           </h1>
-          <p class="hero-paragraph">
+          <p class="hero-paragraph scroll-up">
             Hi! My name is David Hughes Jr. I am a frontend developer whose
             goal is to assist you with your website needs!
           </p>
-          <a class="btn" href="mailto:dave@davidhughesjr.net" target="_blank">
-            <button class="btn">Contact Me</button>
-            <button class="btn-bg"></button>
+          <a class="btn " href="mailto:dave@davidhughesjr.net" target="_blank">
+            <div>
+              <button class="btn scroll-up ">Contact Me</button>
+              <button class="btn-bg scroll-up-min"></button>
+            </div>
           </a>
         </div>
-        <div class="hero-image-container">
-          <img class="hero-image" src="img/hero-image.png" alt="hero-image" />
+        <div class="hero-image-container scale-in">
+          <img class="hero-image " src="img/hero-image.png" alt="hero-image" />
         </div>
       </div>
     </section>
     <section id="services" class="section">
       <div class="services-container">
-        <div class="services-heading">
-          <h5 class="gradient-heading">SERVICES</h5>
-          <h2>Helping you solve problems one step at a time!</h2>
+        <div class="services-heading ">
+          <h5 class="gradient-heading scroll-up">SERVICES</h5>
+          <h2 class="scroll-up">Helping you solve problems one step at a time!</h2>
         </div>
         <div class="services-content">
           <div class="services-list">
-            <div class="services-circles">
+            <div class="services-circles scroll-up">
               <div class="services-circle-blue"></div>
               <div class="services-circle-blue"></div>
               <div class="services-circle-blue"></div>
             </div>
-            <div class="services-list-heading">
+            <div class="services-list-heading scroll-up">
               <h3>What I Can do for you</h3>
               <p>Amazing communication focused on your needs first!</p>
             </div>
@@ -88,12 +91,12 @@
             </ul>
           </div>
           <div class="services-list">
-            <div class="services-circles">
+            <div class="services-circles scroll-up">
               <div class="services-circle-black"></div>
               <div class="services-circle-black"></div>
               <div class="services-circle-black"></div>
             </div>
-            <div class="services-list-heading">
+            <div class="services-list-heading scroll-up">
               <h3>Applications I'm fluent in</h3>
               <p>
                 Every developer needs the right tools do the perfect job. I
@@ -107,12 +110,12 @@
             </ul>
           </div>
           <div class="services-list">
-            <div class="services-circles">
+            <div class="services-circles scroll-up">
               <div class="services-circle-blue"></div>
               <div class="services-circle-blue"></div>
               <div class="services-circle-blue"></div>
             </div>
-            <div class="services-list-heading">
+            <div class="services-list-heading scroll-up">
               <h3>What you can expect</h3>
               <p>I develop products that not only look AMAZING. I make them useful and efficient..</p>
             </div>
@@ -204,8 +207,10 @@
       </div>
       <div class="view-more-btn margin-1">
         <a class="btn">
-          <button id="view-btn" class="btn">View More </button>
-          <button class="btn-bg"></button>
+          <div>
+            <button id="view-btn" class="btn">View More </button>
+            <span class="btn-bg"></span>
+          </div>
         </a>
       </div>
       </div>
@@ -240,8 +245,10 @@
               <span> Send Me A Message </span>
             </h2>
             <a class="btn" href="mailto:dave@davidhughesjr.net" target="_blank">
-              <button class="btn">Let's Talk</button>
-              <button class="btn-bg"></button>
+              <div>
+                <button class="btn">Let's Talk</button>
+                <span class="btn-bg"></span>
+              </div>
             </a>
           </div>
         </div>
