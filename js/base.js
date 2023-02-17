@@ -47,7 +47,7 @@ const itemsToScrollUpMin = document.querySelectorAll('.scroll-up-min')
 const allAnimationClasses = [...itemsToScrollUp, ...itemsToScrollUpMin,...itemsToZoomIn, ]
 
 
-const handleOnScroll = (entries, observer) => {
+const handleOnScroll = (entries) => {
 
 
     entries.forEach((entry) => {
