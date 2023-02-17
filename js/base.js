@@ -51,7 +51,7 @@ const handleOnScroll = (entries, observer) => {
 
 
     entries.forEach((entry) => {
-        console.log(entry)
+    
         if (entry.isIntersecting && entry.target.classList.contains('scroll-up')) {
             entry.target.classList.add('scroll-up-animation')
             entry.target.classList.remove('mode-hidden')
@@ -64,7 +64,7 @@ const handleOnScroll = (entries, observer) => {
             entry.target.classList.add('scale-in-animation')
             entry.target.classList.remove('mode-hidden')
         }
-        console.log(entry.target.list)
+        
     })
 
   
