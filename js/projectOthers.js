@@ -34,7 +34,7 @@ const otherProjectsList = otherProjectData.map((data) => {
   const toolsList = data.tools.map((tool) => {
     return `<li>${tool}</li>`;
   });
-  return `<div class="other-project">
+  return `<div class="other-project scale-in">
             <a href="${data.website}">
               <div class="other-project-icons">
                 <i class="ri-file-line"></i>

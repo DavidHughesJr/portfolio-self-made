@@ -64,9 +64,9 @@ const handleOnScroll = (entries, observer) => {
             entry.target.classList.add('scale-in-animation')
             entry.target.classList.remove('mode-hidden')
         }
-        
+        console.log(entry.target.list)
     })
-    console.log(entries)
+
   
 }
 
