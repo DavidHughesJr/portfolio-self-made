@@ -288,6 +288,12 @@ p {
   font-size: 8rem;
   animation: preLoader 2s;
 }
+.loader-block {
+  position: relative;
+  background-color: var(--bg-color);
+  z-index: 1;
+  height: 100vh;
+}
 /**** HEADER *****/
 .header {
   display: flex;
