@@ -65,7 +65,7 @@ const allAnimationClasses = [...itemsToScrollUp, ...itemsToScrollUpMin,...itemsT
 
 const handleOnScroll = (entries) => {
 
-
+    
     entries.forEach((entry) => {
     
         if (entry.isIntersecting && entry.target.classList.contains('scroll-up')) {

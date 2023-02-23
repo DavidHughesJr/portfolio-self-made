@@ -265,20 +265,22 @@ p {
   text-align: center;
 }
 .complete {
-  top: 0;
-  left: 0;
-  height: 0;
-  width: 0;
   opacity: 0;
   visibility: hidden;
   touch-action: none;
 }
 .loading {
   opacity: 0;
+  visibility: hidden;
+  touch-action: none;
+  display: none;
 }
 .loaded {
   opacity: 1;
   transition: 1s;
+  visibility: visible;
+  display: block;
+  
 }
 .loader-text-top {
   font-size: 8rem;
