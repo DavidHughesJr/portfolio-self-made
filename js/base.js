@@ -1,3 +1,19 @@
+// ***** PRE LOADER  ***** // 
+const preloader = document.getElementById('preloader')
+const content = document.getElementById("content");
+
+const loading = () => {
+    content.classList.remove("preloading");
+    content.classList.add("loaded");
+    preloader.classList.add('complete')
+};
+
+window.onload = (event) => {
+    setTimeout(() => {
+        loading();
+    }, 2000);
+};
+
 // ***** OPEN MOBILE NAV MENU  ***** // 
 const nav = document.querySelector('.nav')
 const mobileNav = document.getElementById('mobile-nav')
