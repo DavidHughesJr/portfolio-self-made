@@ -359,7 +359,7 @@ p {
 }
 .hamburger-menu {
   font-size: 2rem;
-  color: var(--bg-color-alt);
+  color: var(--bg2-color)
 }
 .hamburger-menu:hover {
   cursor: pointer;
