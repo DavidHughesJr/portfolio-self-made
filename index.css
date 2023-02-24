@@ -36,6 +36,8 @@ html {
 }
 body {
   background-color: var(--bg-color-alt);
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 section {
   width: var(--default-width);
@@ -82,11 +84,13 @@ p {
 }
 /**** ANIMATIONS && KEYFRAMES ****/
 @keyframes preLoader {
-   0% {
-     transform: translate3d(0px, 150%, 0px) scale3d(1, 1, 1) rotateX(90deg) rotateY(0deg) rotateZ(60deg) skew(0deg, 0deg);
+  0% {
+    transform: translate3d(0px, 150%, 0px) scale3d(1, 1, 1) rotateX(90deg)
+      rotateY(0deg) rotateZ(60deg) skew(0deg, 0deg);
   }
   100% {
-    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   }
 }
 @keyframes fadeIn {
@@ -280,7 +284,6 @@ p {
   transition: 1s;
   visibility: visible;
   display: block;
-  
 }
 .loader-text-top {
   font-size: 8rem;
