@@ -284,6 +284,7 @@ p {
   transition: 1s;
   visibility: visible;
   display: block;
+  touch-action: manipulation;
 }
 .loader-text-top {
   font-size: 8rem;
