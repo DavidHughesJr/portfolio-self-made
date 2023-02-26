@@ -3,7 +3,7 @@ const preloader = document.getElementById('preloader')
 const content = document.getElementById("content");
 
 const loading = () => {
-    content.classList.remove("preloading");
+    content.classList.remove("loading");
     content.classList.add("loaded");
     preloader.classList.add('complete')
 };
