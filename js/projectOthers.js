@@ -54,9 +54,6 @@ const otherProjectsList = otherProjectData.map((data) => {
 
 otherProjectContentContainer.insertAdjacentHTML("afterbegin", otherProjectsList.join(' '))
 
-const githubImg = document.querySelectorAll('.github-tool-ot')
-
-
 // ***** VIEW MORE PROJECTS BUTTON  ***** // 
 const viewMoreBtn = document.querySelector('.view-more-btn')
 const otherProjects = document.querySelectorAll('.other-project')
@@ -67,7 +64,6 @@ const otherTotalProjects = projectsList.length
 const viewMoreText = 'View More'
 const viewLessText = 'View Less'
 
-console.log(viewBtnText)
 
 // if you have less than 2 projects hide the button
 if (otherTotalProjects < projectsToShow) {
